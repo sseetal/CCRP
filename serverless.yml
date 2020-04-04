@@ -12,4 +12,5 @@ functions:
     events:
       - http:
           path: order
+          cors: true
           method: post

@@ -4,7 +4,7 @@ const config = require("./config")
 
 module.exports.endpoint = async (event, context, callback) => {
   const jsonData = event.body ? JSON.parse(event.body) : event
-  const answers = jsonData.twilio.collected_data.order_food.answers; //Get the answers object from the incoming request object
+  const answers = jsonData.twilio.collected_data.item_details.answers; //Get the answers object from the incoming request object
 
   const objectKeys = Object.keys(answers)
     .map(key => (key)) //Get a list of all keys within "answers" object
